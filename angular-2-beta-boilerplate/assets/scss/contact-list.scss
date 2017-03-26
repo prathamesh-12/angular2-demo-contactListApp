@@ -1,0 +1,19 @@
+.contact-name {
+  cursor: pointer;
+}
+.clicked {
+  color: blue;
+}
+ul {
+    margin: 15px;
+    padding: 0;
+    list-style-type: none;
+}
+
+li:hover, li::selection {
+    
+    transition: padding 0.3s;
+    padding-left: 8px;
+    color: blue;
+    border-left: 3px solid blue;
+}
