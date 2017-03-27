@@ -27,7 +27,8 @@ import { Component } from 'angular2/core';
 @RouteConfig([
     {path: '/contacts', name: 'Contacts', component: ContactListComponent, useAsDefault: true},
     {path: '/newContact', name: 'NewContact', component: NewContactComponent},
-    {path: '/testRoute', name: 'TestRoute', component: TestRouteComponent}
+    {path: '/testRoute', name: 'TestRoute', component: TestRouteComponent},
+    {path: '/newContact/:lastName', name: 'NewContactRouteParams', component: NewContactComponent}
 ])
 export class AppComponent {
     

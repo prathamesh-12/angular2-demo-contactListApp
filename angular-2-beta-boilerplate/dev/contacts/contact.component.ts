@@ -1,3 +1,5 @@
+import { Router } from 'angular2/router';
+import { Contact } from './contact';
 import { Component } from "angular2/core";
 
 @Component({
@@ -37,5 +39,11 @@ import { Component } from "angular2/core";
 })
 
 export class ContactComponent {
-    public contact = {};
+    public contact:Contact = null;
+
+    constructor(private _router: Router) {}
+
+    onRouteWithParamsClicked() {
+        this._router.navigate(["NewContactRouteParams", {lastName: this.contact.lastName}]);
+    }
 }

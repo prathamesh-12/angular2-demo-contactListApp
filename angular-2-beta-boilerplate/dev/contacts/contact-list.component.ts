@@ -16,7 +16,7 @@ import { Component, OnInit } from 'angular2/core';
                 {{contact.firstName}} {{contact.lastName}}
             </li>
         </ul>
-        <contact [contact]="selectedContact"></contact>
+        <contact [contact]="selectedContact" *ngIf="selectedContact"></contact>
     `,
     directives: [ContactComponent],
     providers: [ContactService],
@@ -33,7 +33,7 @@ export class ContactListComponent implements OnInit{
     public contactList: Contact[];
 
     public showConatct = false;
-    public selectedContact = {};
+    public selectedContact = null;
 
     constructor(private _contactService: ContactService) {}
 
